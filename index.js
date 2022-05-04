@@ -54,6 +54,6 @@ const db=mongoose.connection;
 db.on("error",console.error.bind(console,"connection error:"));
 db.once("open",function(){
     // listen to port
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 4040);
 console.log('The Application Is Running At Port:'+process.env.PORT)
 })
